@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,148 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3y-L6-lII">
+                                <rect key="frame" x="16" y="440.5" width="343" height="198.5"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEx-if-hlk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsa-Db-Nar">
+                                <rect key="frame" x="16" y="28" width="109" height="198.5"/>
+                                <color key="backgroundColor" red="0.18603461080257616" green="0.34325266197588516" blue="0.4094820748730964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrz-jV-baI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3c-64-vL4">
+                                <rect key="frame" x="133" y="28" width="109" height="198.5"/>
+                                <color key="backgroundColor" red="0.23218517547942466" green="0.42840511886913296" blue="0.51106440355329952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NSb-xS-pGx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hea-9c-8bP">
+                                <rect key="frame" x="16" y="234.5" width="109" height="198"/>
+                                <color key="backgroundColor" red="0.32797259578177285" green="0.60514259186267261" blue="0.72190276015228427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSr-Hc-WNB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSS-QZ-qlx">
+                                <rect key="frame" x="250" y="234.5" width="109" height="198"/>
+                                <color key="backgroundColor" red="0.3955904248788692" green="0.72990432159929519" blue="0.87073683375634514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UsB-AQ-trN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drum Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaP-lQ-puT">
+                                <rect key="frame" x="16" y="647" width="135" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WSb-E7-hNg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnC-we-lZW">
+                                <rect key="frame" x="250" y="27.5" width="109" height="198.5"/>
+                                <color key="backgroundColor" red="0.27851591023113886" green="0.51389000776274485" blue="0.6130433058375635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zhA-Zd-jQi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOG-dh-Vgh">
+                                <rect key="frame" x="133" y="234.5" width="109" height="198"/>
+                                <color key="backgroundColor" red="0.36014196264904313" green="0.66449832552767119" blue="0.79271097715736039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drumButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o6R-A7-tGq"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="egy-I9-sLl">
+                                <rect key="frame" x="224" y="647" width="135" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="hBf-w5-sSy"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Acoustic"/>
+                                    <segment title="Electric"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchButtonWasPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="s7f-mS-fDV"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.067952887055837574" green="0.067952887055837574" blue="0.067952887055837574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LnC-we-lZW" firstAttribute="height" secondItem="wsa-Db-Nar" secondAttribute="height" id="2nb-Jc-sEF"/>
+                            <constraint firstItem="Hea-9c-8bP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3tI-wy-0K3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LnC-we-lZW" secondAttribute="trailing" id="5UD-2g-tlQ"/>
+                            <constraint firstItem="hOG-dh-Vgh" firstAttribute="height" secondItem="wsa-Db-Nar" secondAttribute="height" id="5ff-UN-8uQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="egy-I9-sLl" secondAttribute="trailing" id="6JH-Fm-idJ"/>
+                            <constraint firstItem="LnC-we-lZW" firstAttribute="centerY" secondItem="wsa-Db-Nar" secondAttribute="centerY" id="91z-we-MDb"/>
+                            <constraint firstItem="ZSS-QZ-qlx" firstAttribute="height" secondItem="wsa-Db-Nar" secondAttribute="height" id="A8b-16-rdt"/>
+                            <constraint firstItem="LnC-we-lZW" firstAttribute="width" secondItem="wsa-Db-Nar" secondAttribute="width" id="AGP-Nl-zGm"/>
+                            <constraint firstItem="WaP-lQ-puT" firstAttribute="top" secondItem="Q3y-L6-lII" secondAttribute="bottom" constant="8" symbolic="YES" id="FIb-5I-5JS"/>
+                            <constraint firstItem="wsa-Db-Nar" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GNH-GC-ZvV"/>
+                            <constraint firstItem="LnC-we-lZW" firstAttribute="leading" secondItem="E3c-64-vL4" secondAttribute="trailing" constant="8" symbolic="YES" id="GWA-JM-gQ9"/>
+                            <constraint firstItem="WaP-lQ-puT" firstAttribute="leading" secondItem="wsa-Db-Nar" secondAttribute="leading" id="HI5-cT-SFy"/>
+                            <constraint firstItem="E3c-64-vL4" firstAttribute="centerX" secondItem="hOG-dh-Vgh" secondAttribute="centerX" id="IHf-4g-3f2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WaP-lQ-puT" secondAttribute="bottom" constant="8" symbolic="YES" id="JgA-cc-Fpp"/>
+                            <constraint firstItem="hOG-dh-Vgh" firstAttribute="centerY" secondItem="Hea-9c-8bP" secondAttribute="centerY" id="M59-ta-VVf"/>
+                            <constraint firstItem="LnC-we-lZW" firstAttribute="centerX" secondItem="ZSS-QZ-qlx" secondAttribute="centerX" id="Nhd-3z-Ges"/>
+                            <constraint firstItem="WaP-lQ-puT" firstAttribute="centerY" secondItem="egy-I9-sLl" secondAttribute="centerY" id="OKH-ex-WKv"/>
+                            <constraint firstItem="wsa-Db-Nar" firstAttribute="leading" secondItem="Hea-9c-8bP" secondAttribute="leading" id="QXf-fn-VcT"/>
+                            <constraint firstItem="Q3y-L6-lII" firstAttribute="height" secondItem="wsa-Db-Nar" secondAttribute="height" id="TrD-SV-OVh"/>
+                            <constraint firstItem="ZSS-QZ-qlx" firstAttribute="centerY" secondItem="Hea-9c-8bP" secondAttribute="centerY" id="WtZ-2d-6cK"/>
+                            <constraint firstItem="egy-I9-sLl" firstAttribute="width" secondItem="WaP-lQ-puT" secondAttribute="width" id="Yuq-CE-Rph"/>
+                            <constraint firstItem="LnC-we-lZW" firstAttribute="trailing" secondItem="Q3y-L6-lII" secondAttribute="trailing" id="aoj-qj-rbc"/>
+                            <constraint firstItem="Hea-9c-8bP" firstAttribute="top" secondItem="wsa-Db-Nar" secondAttribute="bottom" constant="8" symbolic="YES" id="cev-VH-J9v"/>
+                            <constraint firstItem="WaP-lQ-puT" firstAttribute="height" secondItem="egy-I9-sLl" secondAttribute="height" id="djV-Pf-psp"/>
+                            <constraint firstItem="wsa-Db-Nar" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dpn-MM-9rR"/>
+                            <constraint firstItem="E3c-64-vL4" firstAttribute="centerY" secondItem="wsa-Db-Nar" secondAttribute="centerY" id="fXn-wi-jEt"/>
+                            <constraint firstItem="Hea-9c-8bP" firstAttribute="height" secondItem="wsa-Db-Nar" secondAttribute="height" id="fcC-58-k7D"/>
+                            <constraint firstItem="LnC-we-lZW" firstAttribute="trailing" secondItem="ZSS-QZ-qlx" secondAttribute="trailing" id="fxA-W3-7fR"/>
+                            <constraint firstItem="Hea-9c-8bP" firstAttribute="width" secondItem="wsa-Db-Nar" secondAttribute="width" id="hzo-nM-B3Y"/>
+                            <constraint firstItem="wsa-Db-Nar" firstAttribute="leading" secondItem="Q3y-L6-lII" secondAttribute="leading" id="m0h-A6-k51"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="egy-I9-sLl" secondAttribute="bottom" constant="28" id="mR8-0w-CUQ"/>
+                            <constraint firstItem="ZSS-QZ-qlx" firstAttribute="width" secondItem="wsa-Db-Nar" secondAttribute="width" id="mgK-1d-goB"/>
+                            <constraint firstItem="E3c-64-vL4" firstAttribute="width" secondItem="wsa-Db-Nar" secondAttribute="width" id="n0t-i7-aqV"/>
+                            <constraint firstItem="egy-I9-sLl" firstAttribute="leading" secondItem="WaP-lQ-puT" secondAttribute="trailing" constant="8" symbolic="YES" id="nNx-IY-9vS"/>
+                            <constraint firstItem="E3c-64-vL4" firstAttribute="leading" secondItem="wsa-Db-Nar" secondAttribute="trailing" constant="8" symbolic="YES" id="ofV-Il-Fhb"/>
+                            <constraint firstItem="Q3y-L6-lII" firstAttribute="top" secondItem="Hea-9c-8bP" secondAttribute="bottom" constant="8" symbolic="YES" id="sF3-95-Sdf"/>
+                            <constraint firstItem="E3c-64-vL4" firstAttribute="height" secondItem="wsa-Db-Nar" secondAttribute="height" id="st1-p2-zwb"/>
+                            <constraint firstItem="hOG-dh-Vgh" firstAttribute="width" secondItem="wsa-Db-Nar" secondAttribute="width" id="y6T-Su-KMg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

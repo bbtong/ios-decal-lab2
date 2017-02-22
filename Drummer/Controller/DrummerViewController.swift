@@ -26,6 +26,16 @@ class DrummerViewController: UIViewController {
     }
     
     // YOUR CODE HERE
+    @IBAction func drumButtonWasPressed(_ sender: UIButton) {
+            currentDrumKit?.playDrumSound(forDrumWithTag: sender.tag)
+    }
 
+    @IBAction func switchButtonWasPressed(_ sender: UISegmentedControl) {
+        if (sender.selectedSegmentIndex == 0) {
+            currentDrumKit = drumKit0;
+        } else {
+            currentDrumKit = drumKit1;
+        }
+    }
 
 }
